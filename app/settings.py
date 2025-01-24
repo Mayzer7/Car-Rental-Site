@@ -32,6 +32,7 @@ INSTALLED_APPS = [
 
     "main",
     "users",
+    "cars",
 ]
 
 MIDDLEWARE = [
@@ -59,6 +60,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Ваш контекстный процессор:
+                'cars.context_processors.latest_cars',
+                'main.context_processors.func_persons',
             ],
         },
     },
