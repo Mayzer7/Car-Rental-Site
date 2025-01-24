@@ -41,8 +41,7 @@
         </div>
         <!-- Search box 3 start -->
         <div class="search-box-4 sb-8">
-            <form action="{% url "cars:search_car" %}" method="POST">
-                {% csrf_token %}
+            <form action="{% url "cars:search_car" %}" method="get">
                 <div class="form-group">
                     <input type="text" name="keyword" placeholder="Search by name" class="form-control">
                 </div>
@@ -93,8 +92,8 @@
                 <div class="range-slider clearfix">
                     <label>Price</label>
                     <div data-min="0" data-max="150000" data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider"></div>
-                    <input type="hidden" name="min_price" id="min_price" value="0">
-                    <input type="hidden" name="max_price" id="max_price" value="150000">
+                    <input type="hidden" id="min_price">
+                    <input type="hidden" id="max_price">
                 </div>
                     <button class="btn btn-block button-theme btn-md">
                         <i class="fa fa-search"></i> Search
