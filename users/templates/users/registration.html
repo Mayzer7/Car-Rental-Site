@@ -1,16 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="zxx">
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        '../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NX5VQP');</script>
-</head>
 <body>
 {% block content %}
 <!-- Google Tag Manager (noscript) -->
@@ -18,6 +8,19 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="page_loader"></div>
+
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Register To Your Account</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Registration</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
 
 <!-- Contact section start -->
 <div class="contact-section">
@@ -113,12 +116,94 @@
 </div>
 <!-- Contact section end -->
 
-<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
-<!-- Custom javascript -->
-<script  src="js/ie10-viewport-bug-workaround.js"></script>
+<!-- Full Page Search -->
+<div id="full-page-search">
+    <button type="button" class="close">×</button>
+    <form action="https://storage.googleapis.com/theme-vessel/carhouse/index.html#" class="search-header">
+        <input type="search" value="" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-sm button-theme">Search</button>
+    </form>
+</div>
 
+<!-- Car Overview Modal -->
+<div class="car-model-2">
+    <div class="modal fade" id="carOverviewModal" tabindex="-1" role="dialog" aria-labelledby="carOverviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title" id="carOverviewModalLabel">
+                        <h4>Explore Your Dream Car</h4>
+                        <h5><i class="flaticon-pin"></i> 123 Kathal St. Tampa City,</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row modal-raw">
+                        <div class="col-lg-6 modal-left">
+                            <div class="item active">
+                                <img src="img/car-13.jpg" alt="best-car" class="img-fluid modalLabel-1">
+                                <img src="img/car-14.jpg" alt="best-car" class="img-fluid modalLabel-2">
+                                <div class="sobuz">
+                                    <div class="price-box">
+                                        <span class="del-2">$1050.00</span>
+                                    </div>
+                                    <div class="ratings-2">
+                                        <span class="ratings-box">4.5/5</span>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        ( 7 Reviews )
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 modal-right">
+                            <div class="modal-right-content">
+                                <section>
+                                    <h3>Features</h3>
+                                    <div class="features">
+                                        <ul class="bullets">
+                                            <li>Cruise Control</li>
+                                            <li>Airbags</li>
+                                            <li>Air Conditioning</li>
+                                            <li>Alarm System</li>
+                                            <li>Audio Interface</li>
+                                            <li>CDR Audio</li>
+                                            <li>Seat Heating</li>
+                                            <li>ParkAssist</li>
+                                        </ul>
+                                    </div>
+                                </section>
+                                <section>
+                                    <h3>Overview</h3>
+                                    <ul class="bullets">
+                                        <li>Model</li>
+                                        <li>Year</li>
+                                        <li>Condition</li>
+                                        <li>Price</li>
+                                        <li>Audi</li>
+                                        <li>2020</li>
+                                        <li>Brand New</li>
+                                        <li>$178,000</li>
+                                    </ul>
+                                </section>
+                                <div class="description">
+                                    <h3>Description</h3>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+                                    <a href="car-details.html" class="btn btn-md btn-round btn-theme">Show Detail</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock content %}
 </body>
-
 </html>
