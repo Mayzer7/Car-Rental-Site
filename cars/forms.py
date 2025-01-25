@@ -11,3 +11,5 @@ class CarSearchForm(forms.Form):
     car_type = forms.ChoiceField(required=False, label='Car Type', choices=Car.car_type.field.choices)
     min_price = forms.DecimalField(required=False, label='Min Price')
     max_price = forms.DecimalField(required=False, label='Max Price')
+
+    

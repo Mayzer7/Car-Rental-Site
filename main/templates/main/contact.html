@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
+
+<head>
+    <title>{% block title %}Rental Cars - Контакты{% endblock %}</title>
+</head>
+
 <body>
 {% block content %}
 <!-- Google Tag Manager (noscript) -->
@@ -12,10 +17,10 @@
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Contact Us</h1>
+            <h1>Свяжитесь с нами!</h1>
             <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Contact Us</li>
+                <li><a href="{% url "main:index" %}">Главная</a></li>
+                <li class="active">Контакты</li>
             </ul>
         </div>
     </div>
@@ -27,8 +32,8 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title text-center">
-            <h1>Contact <span>Us</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+            <h1>Отправьте <span>Заявку</span></h1>
+            <p>Если у вас есть вопросы к нашей компании или вам нужна помощь с заказом, отправьте нам письмо на почту!</p>
         </div>
         <form action="#" method="POST" enctype="multipart/form-data">
             <div class="row">
@@ -36,22 +41,27 @@
                     <div class="row">
                         <div class="col-md-6 text-left">
                             <div class="form-group name">
-                                <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                                <input type="text" name="name" class="form-control" placeholder="Имя" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-left">
+                            <div class="form-group lastname">
+                                <input type="text" name="lastname" class="form-control" placeholder="Фамилия" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group email">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group subject">
-                                <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                                <input type="email" name="email" class="form-control" placeholder="Почта" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group number">
-                                <input type="text" name="phone" class="form-control" placeholder="Phone Number">
+                                <input type="text" name="phone" class="form-control" placeholder="Номер телефона">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group subject">
+                                <input type="text" name="subject" class="form-control" placeholder="Тема заявки" required>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -61,7 +71,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="send-btn text-center">
-                                <button type="submit" class="btn btn-md button-theme">Send Message</button>
+                                <button type="submit" class="btn btn-md button-theme">Отправить заявку</button>
                             </div>
                         </div>
                     </div>
@@ -73,8 +83,8 @@
                                 <i class="flaticon-phone"></i>
                             </div>
                             <div class="detail">
-                                <h5>Phone:</h5>
-                                <p><a href="#">0477 8556 552</a></p>
+                                <h5>Телефон:</h5>
+                                <p><a href="#">+78005553535</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -82,8 +92,8 @@
                                 <i class="flaticon-mail"></i>
                             </div>
                             <div class="detail">
-                                <h5>Email:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <h5>Почта:</h5>
+                                <p><a href="#">info@Rentalcars.ru</a></p>
                             </div>
                         </div>
                         <div class="ci-box">
@@ -91,11 +101,11 @@
                                 <i class="flaticon-earth"></i>
                             </div>
                             <div class="detail">
-                                <h5>Web:</h5>
-                                <p><a href="#">info@themevessel.com</a></p>
+                                <h5>Сайт:</h5>
+                                <p><a href="#">rentalcars.ru</a></p>
                             </div>
                         </div>
-                        <div class="ci-box mb-0">
+                        {% comment %} <div class="ci-box mb-0">
                             <div class="icon">
                                 <i class="flaticon-fax"></i>
                             </div>
@@ -103,7 +113,7 @@
                                 <h5>Fax:</h5>
                                 <p><a href="#">+0477 85X6 552</a></p>
                             </div>
-                        </div>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </div>

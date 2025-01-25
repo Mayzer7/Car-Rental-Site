@@ -49,3 +49,4 @@ def search_car(request):
         return render(request, 'cars/car_found.html', {'cars': cars})
     else:
         return render(request, 'cars/car_not_found.html')
+

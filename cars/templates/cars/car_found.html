@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+<head>
+    <title>{% block title %}Rental Cars - Машины {% endblock %}</title>
+</head>
+
 <body>
 {% block content %}
 <!-- Google Tag Manager (noscript) -->
@@ -9,16 +13,14 @@
 <!-- End Google Tag Manager (noscript) -->
 <div class="page_loader"></div>
 
-
-
 <!-- Sub banner start -->
 <div class="sub-banner overview-bgi">
     <div class="container breadcrumb-area">
         <div class="breadcrumb-areas">
-            <h1>Our Car Inventory</h1>
+            <h1>Все автомобили</h1>
             <ul class="breadcrumbs">
-                <li><a href="{% url "main:index" %} %}">Home</a></li>
-                <li class="active">Cars</li>
+                <li><a href="{% url "main:index" %}">Главная</a></li>
+                <li class="active">Машины</li>
             </ul>
         </div>
     </div>
@@ -38,7 +40,7 @@
                                 <a href="car-details.html" class="car-img">
                                     <div class="tag">For Rent</div>
                                     <div class="price-box">
-                                        <span>${{ car.price }}</span>
+                                        <span>₽{{ car.price }}</span>
                                     </div>
                                     <img class="d-block w-100" src="{{ car.image.url }}" alt="car">
                                 </a>
@@ -103,60 +105,66 @@
                         <h3 class="sidebar-title">Search your desire car</h3>
                         <form action="{% url "cars:search_car" %}" method="get">
                             <div class="form-group">
-                                <input type="text" name="keyword" placeholder="Search by name" class="form-control">
+                                <input type="text" name="keyword" placeholder="Название машины" class="form-control">
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-brand">
-                                    <option selected="true" disabled="disabled">Brand</option>
-                                    <option>Audi</option>
-                                    <option>BMW</option>
-                                    <option>Honda</option>
-                                    <option>Nissan</option>
+                                    <option selected="true" disabled="disabled">Бренд</option>
+                                    {% for car in latest_cars %}
+                                        {% if car.brand %}
+                                            <option>{{ car.brand}}</option>
+                                        {% endif %}
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-make">
-                                    <option selected="true" disabled="disabled">Model</option>
-                                    <option>BMW</option>
-                                    <option>Honda</option>
-                                    <option>Lamborghini Huracán</option>
-                                    <option>Sports Car</option>
+                                    <option selected="true" disabled="disabled">Модель</option>
+                                    {% for car in latest_cars %}
+                                        {% if car.model %}
+                                            <option>{{ car.model}}</option>
+                                        {% endif %}
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-location">
-                                    <option selected="true" disabled="disabled">Location</option>
-                                    <option>United States</option>
-                                    <option>United Kingdom</option>
+                                    <option selected="true" disabled="disabled">Локация</option>
+                                    {% for car in latest_cars %}
+                                        {% if car.location %}
+                                            <option>{{ car.location}}</option>
+                                        {% endif %}
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-year">
-                                    <option selected="true" disabled="disabled">Year</option>
-                                    <option>2016</option>
-                                    <option>2017</option>
-                                    <option>2018</option>
-                                    <option>2019</option>
+                                    <option selected="true" disabled="disabled">Год выпуска</option>
+                                    {% for car in latest_cars %}
+                                        {% if car.year %}
+                                            <option>{{ car.year}}</option>
+                                        {% endif %}
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-type">
-                                    <option selected="true" disabled="disabled">Select Type Of Car</option>
-                                    <option>Sedan</option>
-                                    <option>Sports</option>
-                                    <option>Hatchback</option>
-                                    <option>Pickup Truck</option>
-                                    <option>SUV</option>
+                                    <option selected="true" disabled="disabled">Класс автомобиля</option>
+                                    {% for car in latest_cars %}
+                                        {% if car.car_type %}
+                                            <option>{{ car.car_type}}</option>
+                                        {% endif %}
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="range-slider clearfix">
-                                <label>Price</label>
-                                <div data-min="0" data-max="150000" data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider"></div>
+                                <label>Цена</label>
+                                <div data-min="0" data-max="100000" data-min-name="min_price" data-max-name="max_price" data-unit="РУБ" class="range-slider-ui ui-slider"></div>
                                 <input type="hidden" id="min_price">
                                 <input type="hidden" id="max_price">
                             </div>
                                 <button class="btn btn-block button-theme btn-md">
-                                    <i class="fa fa-search"></i> Search
+                                    <i class="fa fa-search"></i> Поиск
                                 </button>
                             </div>
                         </form>
@@ -176,7 +184,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>  
         </div>
     </div>
 </div>

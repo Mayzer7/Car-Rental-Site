@@ -57,22 +57,22 @@
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-7">
                     <div class="list-inline">
-                        <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>+55-4XX-634-7071</a>
-                        <a href="tel:info@themevessel.com"><i class="fa fa-envelope"></i>info@themevessel.com</a>
-                        <a href="tel:info@themevessel.com"><i class="fa fa-clock-o"></i>Mon - Sun: 8:00am - 6:00pm</a>
+                        <a href="tel:+55-4XX-634-7071"><i class="fa fa-phone"></i>+78005553535</a>
+                        <a href="tel:info@rentalcars.com"><i class="fa fa-envelope"></i>info@rentalcars.com</a>
+                        <a href="tel:info@rentalcars.com"><i class="fa fa-clock-o"></i>Часы работы: Пн - Вс: 8:00 - 18:00</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-5">
                     <ul class="top-social-media pull-right">
                         {% if user.is_authenticated %}
-                            <li><a href="#">Hello, {{ user.username }}</li>
-                            <li><a href="{% url "users:logout" %}">Exit</a></li>
+                            <li><a href="#">Привет, {{ user.username }}</li>
+                            <li><a href="{% url "users:logout" %}">Выход</a></li>
                         {% else %}
                             <li>
-                                <a href="{% url "users:login" %}" class="sign-in"><i class="fa fa-sign-in"></i> Login</a>
+                                <a href="{% url "users:login" %}" class="sign-in"><i class="fa fa-sign-in"></i> Войти</a>
                             </li>
                             <li>
-                                <a href="{% url "users:registration" %}" class="sign-in"><i class="fa fa-user"></i> Register</a>
+                                <a href="{% url "users:registration" %}" class="sign-in"><i class="fa fa-user"></i> Зарегистрироваться</a>
                             </li>
                         {% endif %}
                     </ul>
@@ -96,31 +96,31 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="{% url "main:index" %}">
-                                Home
+                                Главная
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url "cars:search_car" %}">
-                                Cars
+                                Машины
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url "main:about" %}">
-                                About
+                                О нас
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url "main:services" %}">
-                                Services
+                                Сервисы
                             </a>
                         </li>
                         
                         
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="{% url "main:contact" %}">Contact</a>
+                            <a class="nav-link" href="{% url "main:contact" %}">Контакты</a>
                         </li>
                         <li class="nav-item dropdown m-hide">
-                            <a href="#full-page-search" class="nav-link h-icon">
+                            <a href="#" class="nav-link h-icon">
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>

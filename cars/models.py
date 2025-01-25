@@ -5,7 +5,7 @@ from django.db import models
 class Car(models.Model):
     name = models.CharField(max_length=255, verbose_name="Название машины")
     brand = models.CharField(max_length=20, null=True, blank=True, verbose_name="Брэнд")
-    # model = models.CharField(max_length=20, null=True, blank=True, verbose_name="Модель")
+    model = models.CharField(max_length=20, null=True, blank=True, verbose_name="Модель")
     mileage = models.PositiveIntegerField(verbose_name="Пробег (в км)")
     year = models.PositiveIntegerField(verbose_name="Год выпуска")
     transmission = models.CharField(max_length=50, verbose_name="Привод", choices=(
@@ -13,7 +13,7 @@ class Car(models.Model):
         ('automatic', 'Automatic')
     ))
     location = models.CharField(max_length=255, verbose_name="Адрес")
-    car_type = models.CharField(max_length=50, verbose_name="Тип машины", choices=(
+    car_type = models.CharField(max_length=50, verbose_name="Класс автомобиля", choices=(
         ('sedan', 'Sedan'),
         ('suv', 'SUV'),
         ('truck', 'Truck'),
