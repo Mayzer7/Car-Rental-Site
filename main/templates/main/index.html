@@ -14,27 +14,30 @@
             <div class="carousel-item banner-max-height active item-bg">
                 <img class="d-block w-100 h-100" src="{% static "img/car-1.jpg" %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>Wow Factor Standard</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
-                    <a href="services.html" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>ИССЛЕДУЙТЕ АВТОМОБИЛЬ<br>
+                        СВОЕЙ МЕЧТЫ</h3>
+                    <h5>Позвольте нам помочь вам с инновационным подходом<br>
+                        к поиску автомобиля вашей мечты, избавив вас от стресса.</h5>
+                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static "img/car-2.jpg" %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>Explore Your Dream Car</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
-                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                    <h3>ПОЗНАКОМЬТЕСЬ С ЛУЧШИМИ<br>
+                        МОДЕЛЯМИ</h3>
+                    <h5>Откройте для себя наши лучшие автомобили, предоставляющие<br>
+                        комфорт и стиль на каждом километре вашего пути.</h5>
+                    <a href="services.html" class="btn btn-lg btn-theme">Read more</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
                 <img class="d-block w-100 h-100" src="{% static "img/car-3.jpg" %}" alt="banner">
                 <div class="carousel-content container banner-info-2 bi-2 text-left">
-                    <h3>We Are Wheel</h3>
-                    <h5>Allow us to guide you through the innovative stress<br>
-                        free approach in finding your dream car.</h5>
+                    <h3>ВЫБОР АВТОМОБИЛЯ<br>
+                        БЕЗ ПРЕДЕЛОВ</h3>
+                    <h5>Мы предлагаем широкий ассортимент автомобилей на любой вкус и бюджет,<br>
+                        чтобы каждый мог найти идеальный вариант для себя.</h5>
                     <a href="#" class="btn btn-lg btn-theme">Read more</a>
                 </div>
             </div>
@@ -48,9 +51,9 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-brand">
                         <option selected="true" disabled="disabled">Бренд</option>
-                        {% for car in latest_cars %}
-                            {% if car.brand %}
-                                <option>{{ car.brand}}</option>
+                        {% for brand in unique_brands %}
+                            {% if brand %}
+                                <option>{{ brand}}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
@@ -58,9 +61,9 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-make">
                         <option selected="true" disabled="disabled">Модель</option>
-                        {% for car in latest_cars %}
-                            {% if car.model %}
-                                <option>{{ car.model}}</option>
+                        {% for model in unique_model %}
+                            {% if model %}
+                                <option>{{ model }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
@@ -68,9 +71,9 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-location">
                         <option selected="true" disabled="disabled">Локация</option>
-                        {% for car in latest_cars %}
-                            {% if car.location %}
-                                <option>{{ car.location}}</option>
+                        {% for location in unique_location %}
+                            {% if location %}
+                                <option>{{ location }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
@@ -78,9 +81,9 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-year">
                         <option selected="true" disabled="disabled">Год выпуска</option>
-                        {% for car in latest_cars %}
-                            {% if car.year %}
-                                <option>{{ car.year}}</option>
+                        {% for year in unique_year %}
+                            {% if year %}
+                                <option>{{ year }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
@@ -88,9 +91,9 @@
                 <div class="form-group">
                     <select class="form-control search-fields" name="select-type">
                         <option selected="true" disabled="disabled">Класс автомобиля</option>
-                        {% for car in latest_cars %}
-                            {% if car.car_type %}
-                                <option>{{ car.car_type}}</option>
+                        {% for car_type in unique_car_type %}
+                            {% if car_type %}
+                                <option>{{ car_type }}</option>
                             {% endif %}
                         {% endfor %}
                     </select>
@@ -624,6 +627,8 @@
         </div>
     </div>
 </div>
+
+
 
 {% endblock content %}
 </body>

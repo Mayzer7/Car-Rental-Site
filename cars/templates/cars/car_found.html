@@ -32,6 +32,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
+                {% if message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+                {% endif %}
                 <div class="row">
                     {% for car in cars %}
                     <div class="col-lg-6 col-md-6">
@@ -110,9 +115,9 @@
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-brand">
                                     <option selected="true" disabled="disabled">Бренд</option>
-                                    {% for car in latest_cars %}
-                                        {% if car.brand %}
-                                            <option>{{ car.brand}}</option>
+                                    {% for brand in unique_brands %}
+                                        {% if brand %}
+                                            <option>{{ brand }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -120,9 +125,9 @@
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-make">
                                     <option selected="true" disabled="disabled">Модель</option>
-                                    {% for car in latest_cars %}
-                                        {% if car.model %}
-                                            <option>{{ car.model}}</option>
+                                    {% for model in unique_model %}
+                                        {% if model %}
+                                            <option>{{ model }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -130,9 +135,9 @@
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-location">
                                     <option selected="true" disabled="disabled">Локация</option>
-                                    {% for car in latest_cars %}
-                                        {% if car.location %}
-                                            <option>{{ car.location}}</option>
+                                    {% for location in unique_location %}
+                                        {% if location %}
+                                            <option>{{ location }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -140,9 +145,9 @@
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-year">
                                     <option selected="true" disabled="disabled">Год выпуска</option>
-                                    {% for car in latest_cars %}
-                                        {% if car.year %}
-                                            <option>{{ car.year}}</option>
+                                    {% for year in unique_year %}
+                                        {% if year %}
+                                            <option>{{ year }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -150,9 +155,9 @@
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-type">
                                     <option selected="true" disabled="disabled">Класс автомобиля</option>
-                                    {% for car in latest_cars %}
-                                        {% if car.car_type %}
-                                            <option>{{ car.car_type}}</option>
+                                    {% for car_type in unique_car_type %}
+                                        {% if car_type %}
+                                            <option>{{ car_type }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>

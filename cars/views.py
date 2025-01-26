@@ -48,5 +48,8 @@ def search_car(request):
     if cars.exists():
         return render(request, 'cars/car_found.html', {'cars': cars})
     else:
-        return render(request, 'cars/car_not_found.html')
+        # Если машин не найдено, создаем сообщение об ошибке
+        all_cars = Car.objects.all()
+        message = "ПО ВАШЕМУ ЗАПРОСУ МАШИНА НЕ НАЙДЕНА"
+        return render(request, 'cars/car_found.html', {'message': message, 'cars': all_cars})
 
