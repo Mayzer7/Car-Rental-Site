@@ -38,7 +38,7 @@
                 </div>
                 {% endif %}
                 <div class="row">
-                    {% for car in cars %}
+                    {% for car in page_obj %}
                     <div class="col-lg-6 col-md-6">
                         <div class="car-box-3">
                             <div class="car-thumbnail">
@@ -72,11 +72,9 @@
                                     </a>
                                 </div>
                                 <ul class="facilities-list clearfix">
-                                    {% comment %} <li>Petrol</li> {% endcomment %}
                                     <li>{{ car.mileage }} km</li>
                                     <li>{{ car.transmission }}</li>
                                     <li>{{ car.car_type }}</li>
-                                    {% comment %} <li>white</li> {% endcomment %}
                                     <li>{{ car.year }}</li>
                                 </ul>
                             </div>
@@ -85,20 +83,27 @@
                     {% endfor %}
                 </div>
 
-                
                 <!-- Page navigation start -->
                 <div class="pagination-box p-box-2 text-center">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
+                            {% if page_obj.has_previous %}
                             <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-left"></i></a>
+                                <a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a>
                             </li>
-                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            {% endif %}
+
+                            {% for num in page_obj.paginator.page_range %}
+                            <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                            </li>
+                            {% endfor %}
+
+                            {% if page_obj.has_next %}
                             <li class="page-item">
-                                <a class="page-link" href="#"><i class="fa fa-angle-right"></i></a>
+                                <a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a>
                             </li>
+                            {% endif %}
                         </ul>
                     </nav>
                 </div>
@@ -177,7 +182,7 @@
                    
                     <!-- Question start -->
                     <div class="widget question widget-3">
-                        <h5 class="sidebar-title">Follow us</h5>
+                        <h5 class="sidebar-title">Подпишитесь на нас</h5>
                         <div class="social-list clearfix">
                             <ul>
                                 <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
@@ -197,7 +202,6 @@
 
 <!-- Footer start -->
 <footer class="footer">
-    
     <div class="sub-footer">
         <div class="container">
             <div class="row">

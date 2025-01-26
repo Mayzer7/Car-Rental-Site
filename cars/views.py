@@ -1,55 +1,41 @@
 from django.shortcuts import render
 from .models import Car
 from django.db.models import Q
+from django.core.paginator import Paginator
 
 def cars(request):
     return render(request, 'cars/cars.html')
 
 def search_car(request):
-    # Получаем параметры из формы
-    keyword = request.GET.get('keyword', '').strip()
-    brand = request.GET.get('select-brand', '').strip()
-    model = request.GET.get('select-make', '').strip()
-    location = request.GET.get('select-location', '').strip()
-    year = request.GET.get('select-year', '').strip()
-    car_type = request.GET.get('select-type', '').strip()
-    
-    # Обработка диапазона цен
-    try:
-        min_price = int(request.GET.get('min_price', 0))
-    except (ValueError, TypeError):
-        min_price = 0
-    
-    try:
-        max_price = int(request.GET.get('max_price', 150000))
-    except (ValueError, TypeError):
-        max_price = 150000
+    # Получение фильтров из GET-запроса
+    keyword = request.GET.get('keyword', '')
+    brand = request.GET.get('select-brand', '')
+    model = request.GET.get('select-make', '')
 
-    # Начинаем с общего набора всех машин
+    # Основной запрос
     cars = Car.objects.all()
 
-    # Фильтруем по каждому параметру, если он указан
+    # Применение фильтров
     if keyword:
         cars = cars.filter(name__icontains=keyword)
     if brand:
         cars = cars.filter(brand__icontains=brand)
     if model:
         cars = cars.filter(model__icontains=model)
-    if location:
-        cars = cars.filter(location__icontains=location)
-    if year:
-        cars = cars.filter(year=year)
-    if car_type:
-        cars = cars.filter(car_type__icontains=car_type)
-    if min_price is not None and max_price is not None:
-        cars = cars.filter(price__gte=min_price, price__lte=max_price)
 
-    # Проверяем, найдены ли машины
-    if cars.exists():
-        return render(request, 'cars/car_found.html', {'cars': cars})
+    # Проверка, есть ли результаты
+    if not cars.exists():
+        message = "Автомобиль с указанными критериями не найден. Показан весь список автомобилей."
+        cars = Car.objects.all()  # Возвращаем все автомобили
     else:
-        # Если машин не найдено, создаем сообщение об ошибке
-        all_cars = Car.objects.all()
-        message = "ПО ВАШЕМУ ЗАПРОСУ МАШИНА НЕ НАЙДЕНА"
-        return render(request, 'cars/car_found.html', {'message': message, 'cars': all_cars})
+        message = ""
 
+    # Пагинация
+    paginator = Paginator(cars, 4)  # 6 автомобилей на страницу
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'cars/car_found.html', {
+        'page_obj': page_obj,
+        'message': message,
+    })

@@ -1,3 +1,9 @@
+.pagination .page-item.active .page-link {
+    background-color: red; /* Цвет фона активного элемента */
+    border-color: red;     /* Цвет границы активного элемента */
+    color: white;          /* Цвет текста */
+}
+
 html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
