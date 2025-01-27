@@ -26,18 +26,23 @@ class Car(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)  # Сохраняем объект
-        if self.image:
-            # Открываем изображение
-            img = Image.open(self.image.path)
 
-            # Устанавливаем фиксированные размеры
-            target_width, target_height = 750, 500
+        def resize_image(image_field):
+            if image_field:
+                # Открываем изображение
+                img = Image.open(image_field.path)
 
-            # Принудительно меняем размер изображения
-            img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+                # Устанавливаем фиксированные размеры
+                target_width, target_height = 750, 500
 
-            # Сохраняем изменённое изображение
-            img.save(self.image.path)
+                # Принудительно меняем размер изображения
+                img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+                # Сохраняем изменённое изображение
+                img.save(image_field.path)
+
+        # Масштабируем основное изображение
+        resize_image(self.image)
 
     class Meta:
         verbose_name = "Машина"
@@ -68,20 +73,39 @@ class RareCar(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name="Цена аренды")
     image = models.ImageField(upload_to='cars/', verbose_name="Изображение (750x500px)")
 
+    # Поля для дополнительных изображений
+    additional_image_1 = models.ImageField(upload_to='cars/additional_images/', null=True, blank=True, verbose_name="Дополнительное изображение 1")
+    additional_image_2 = models.ImageField(upload_to='cars/additional_images/', null=True, blank=True, verbose_name="Дополнительное изображение 2")
+    additional_image_3 = models.ImageField(upload_to='cars/additional_images/', null=True, blank=True, verbose_name="Дополнительное изображение 3")
+    additional_image_4 = models.ImageField(upload_to='cars/additional_images/', null=True, blank=True, verbose_name="Дополнительное изображение 4")
+    additional_image_5 = models.ImageField(upload_to='cars/additional_images/', null=True, blank=True, verbose_name="Дополнительное изображение 5")
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)  # Сохраняем объект
-        if self.image:
-            # Открываем изображение
-            img = Image.open(self.image.path)
 
-            # Устанавливаем фиксированные размеры
-            target_width, target_height = 750, 500
+        def resize_image(image_field):
+            if image_field:
+                # Открываем изображение
+                img = Image.open(image_field.path)
 
-            # Принудительно меняем размер изображения
-            img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+                # Устанавливаем фиксированные размеры
+                target_width, target_height = 750, 500
 
-            # Сохраняем изменённое изображение
-            img.save(self.image.path)
+                # Принудительно меняем размер изображения
+                img = img.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+                # Сохраняем изменённое изображение
+                img.save(image_field.path)
+
+        # Масштабируем основное изображение
+        resize_image(self.image)
+
+        # Масштабируем дополнительные изображения
+        resize_image(self.additional_image_1)
+        resize_image(self.additional_image_2)
+        resize_image(self.additional_image_3)
+        resize_image(self.additional_image_4)
+        resize_image(self.additional_image_5)
 
     class Meta:
         verbose_name = "редкую машину"

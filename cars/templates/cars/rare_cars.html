@@ -32,18 +32,31 @@
                                                 <i class="fa fa-expand"></i>
                                                 <img class="hidden" src="{{ car.image.url }}">
                                             </a>
-                                            <a href="{% static "img/car/car-2.jpg" %}" class="hidden">
-                                                <img class="hidden" src="{% static "img/car/car-2.jpg" %}">
+                                            {% if car.additional_image_1 %}
+                                            <a href="{{ car.additional_image_1.url }}" class="hidden">
+                                                <img class="hidden" src="{{ car.additional_image_1.url }}">
                                             </a>
-                                            <a href="{% static "img/car/car-3.jpg" %}" class="hidden">
-                                                <img class="hidden" src="{% static "img/car/car-3.jpg" %}">
+                                            {% endif %}
+                                            {% if car.additional_image_2 %}
+                                            <a href="{{ car.additional_image_2.url }}" class="hidden">
+                                                <img class="hidden" src="{{ car.additional_image_2.url }}">
                                             </a>
-                                            <a href="{% static "img/car/car-4.jpg" %}" class="hidden">
-                                                <img class="hidden" src="{% static "img/car/car-4.jpg" %}">
+                                            {% endif %}
+                                            {% if car.additional_image_3 %}
+                                            <a href="{{ car.additional_image_3.url }}" class="hidden">
+                                                <img class="hidden" src="{{ car.additional_image_3.url }}">
                                             </a>
-                                            <a href="{% static "img/car/car-5.jpg" %}" class="hidden">
-                                                <img class="hidden" src="{% static "img/car/car-5.jpg" %}">
+                                            {% endif %}
+                                            {% if car.additional_image_4 %}
+                                            <a href="{{ car.additional_image_4.url }}" class="hidden">
+                                                <img class="hidden" src="{{ car.additional_image_4.url }}">
                                             </a>
+                                            {% endif %}
+                                            {% if car.additional_image_4 %}
+                                            <a href="{{ car.additional_image_4.url }}" class="hidden">
+                                                <img class="hidden" src="{{ car.additional_image_4.url }}">
+                                            </a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
