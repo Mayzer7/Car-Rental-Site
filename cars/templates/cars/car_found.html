@@ -119,7 +119,11 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-brand">
-                                    <option disabled {% if not filters.brand %}selected{% endif %}>Бренд</option>
+                                    <!-- Заголовок по умолчанию -->
+                                    <option value="" disabled selected>Бренд</option>
+                                    
+                                    <!-- Кнопка для сброса фильтра -->
+                                    <option value="">Любой</option>
                                     {% for brand in unique_brands %}
                                         {% if brand %}
                                             <option value="{{ brand }}" {% if filters.brand == brand %}selected{% endif %}>{{ brand }}</option>
@@ -129,7 +133,11 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-make">
-                                    <option disabled {% if not filters.model %}selected{% endif %}>Модель</option>
+                                    <!-- Заголовок по умолчанию -->
+                                    <option value="" disabled selected>Модель</option>
+                                    
+                                    <!-- Кнопка для сброса фильтра -->
+                                    <option value="">Любая</option>
                                     {% for model in unique_model %}
                                         {% if model %}
                                             <option value="{{ model }}" {% if filters.model == model %}selected{% endif %}>{{ model }}</option>
@@ -139,7 +147,11 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-location">
-                                    <option disabled {% if not filters.location %}selected{% endif %}>Локация</option>
+                                    <!-- Заголовок по умолчанию -->
+                                    <option value="" disabled selected>Локация</option>
+                                    
+                                    <!-- Кнопка для сброса фильтра -->
+                                    <option value="">Любая</option>
                                     {% for location in unique_location %}
                                         {% if location %}
                                             <option value="{{ location }}" {% if filters.location == location %}selected{% endif %}>{{ location }}</option>
@@ -149,7 +161,11 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-year">
-                                    <option disabled {% if not filters.year %}selected{% endif %}>Год выпуска</option>
+                                    <!-- Заголовок по умолчанию -->
+                                    <option value="" disabled selected>Год выпуска</option>
+                                    
+                                    <!-- Кнопка для сброса фильтра -->
+                                    <option value="">Любой</option>
                                     {% for year in unique_year %}
                                         {% if year %}
                                             <option value="{{ year }}" {% if filters.year == year %}selected{% endif %}>{{ year }}</option>
@@ -159,7 +175,13 @@
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-type">
-                                    <option disabled {% if not filters.car_type %}selected{% endif %}>Класс автомобиля</option>
+                                    <!-- Заголовок по умолчанию -->
+                                    <option value="" disabled selected>Класс автомобиля</option>
+                                    
+                                    <!-- Кнопка для сброса фильтра -->
+                                    <option value="">Любой</option>
+                                    
+                                    <!-- Список классов автомобилей -->
                                     {% for car_type in unique_car_type %}
                                         {% if car_type %}
                                             <option value="{{ car_type }}" {% if filters.car_type == car_type %}selected{% endif %}>{{ car_type }}</option>
@@ -167,6 +189,7 @@
                                     {% endfor %}
                                 </select>
                             </div>
+                            
                             <div class="range-slider clearfix">
                                 <label>Цена</label>
                                 <div data-min="0" data-max="100000" data-min-name="min_price" data-max-name="max_price" data-unit="РУБ" class="range-slider-ui ui-slider"></div>
@@ -176,7 +199,7 @@
                             <button class="btn btn-block button-theme btn-md">
                                 <i class="fa fa-search"></i> Поиск
                             </button>
-                        </form>                                            
+                        </form>                                                                    
                     </div>
                    
                     <!-- Question start -->
