@@ -66,6 +66,11 @@
                     <ul class="top-social-media pull-right">
                         {% if user.is_authenticated %}
                             <li><a href="#">Привет, {{ user.username }}</li>
+                            
+                            {% if user.is_superuser %}
+                                <li><a href="{% url 'admin:index' %}">Админ панель</li>
+                            {% endif %}
+                            
                             <li><a href="{% url "users:logout" %}">Выход</a></li>
                         {% else %}
                             <li>

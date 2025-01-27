@@ -5,21 +5,20 @@
     <div class="container">
         <!-- Main title -->
         <div class="main-title">
-            <h1>Latest <span>Cars</span></h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Наши <span>Автомобили</span></h1>
         </div>
         <div class="row">
-        {% for car in latest_cars %}
+        {% for car in all_cars %}
             <div class="col-lg-4 col-md-6">
                 <div class="car-box">
                     <div class="car-thumbnail">
                         <a href="car-details.html" class="car-img">
-                            <div class="tag">For Sale</div>
+                            <div class="tag">For Rent</div>
                             <img class="d-block w-100" src="{{ car.image.url }}" alt="{{ car.name }}">
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-way"></i></span>{{ car.mileage }} km
+                                        <span><i class="flaticon-way"></i></span>{{ car.mileage }} КМ
                                     </li>
                                     <li>
                                         <span><i class="flaticon-calendar-1"></i></span>{{ car.year }}

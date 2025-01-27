@@ -1,0 +1,83 @@
+{% load static %}
+{% load custom_filters %}
+
+<!-- Featured car start -->
+<div class="featured-car content-area-5">
+    <div class="container">
+        <!-- Main title -->
+        <div class="main-title">
+            <h1>Редкие <span>Автомобили</span></h1>
+        </div>
+        <!-- Slick slider area start -->
+        <div class="slick-slider-area clearfix">
+            <div class="row slick-carousel" data-slick='{"slidesToShow": 3, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'>
+                {% for car in rare_cars %}
+                <div class="slick-slide-item">
+                    <div class="car-box-3">
+                        <div class="car-thumbnail">
+                            <a href="car-details.html" class="car-img">
+                                <div class="tag-2">RARE</div>
+                                <div class="price-box">
+                                    <span class="del"><del>{{ car.price }}</del></span>
+                                    <br>
+                                    <span>{{ car.price|discount_price:20 }}</span>
+                                </div>
+                                <img class="d-block w-100" src="{{ car.image.url }}" alt="car">
+                            </a>
+                            <div class="carbox-overlap-wrapper">
+                                <div class="overlap-box">
+                                    <div class="overlap-btns-area">
+                                        <div class="car-magnify-gallery">
+                                            <a href="{{ car.image.url }}" class="overlap-btn">
+                                                <i class="fa fa-expand"></i>
+                                                <img class="hidden" src="{{ car.image.url }}">
+                                            </a>
+                                            <a href="{% static "img/car/car-2.jpg" %}" class="hidden">
+                                                <img class="hidden" src="{% static "img/car/car-2.jpg" %}">
+                                            </a>
+                                            <a href="{% static "img/car/car-3.jpg" %}" class="hidden">
+                                                <img class="hidden" src="{% static "img/car/car-3.jpg" %}">
+                                            </a>
+                                            <a href="{% static "img/car/car-4.jpg" %}" class="hidden">
+                                                <img class="hidden" src="{% static "img/car/car-4.jpg" %}">
+                                            </a>
+                                            <a href="{% static "img/car/car-5.jpg" %}" class="hidden">
+                                                <img class="hidden" src="{% static "img/car/car-5.jpg" %}">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <h1 class="title">
+                                <a href="car-details.html">{{ car.name }}</a>
+                            </h1>
+                            <div class="location">
+                                <a href="car-details.html">
+                                    <i class="flaticon-pin"></i>{{ car.location }}
+                                </a>
+                            </div>
+                            <ul class="facilities-list clearfix">
+                                <li>{{ car.mileage }} КМ</li>
+                                <li>{{ car.transmission }}</li>
+                                <li>{{ car.car_type }}</li>
+                                <li>{{ car.year }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="slick-btn">
+                <div class="slick-prev slick-arrow-buton sab-4">
+                    <i class="fa fa-angle-left"></i>
+                </div>
+                <div class="slick-next slick-arrow-buton sab-3">
+                    <i class="fa fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Featured car end -->

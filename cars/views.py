@@ -14,6 +14,9 @@ def search_car(request):
     location = request.GET.get('select-location', '')
     year = request.GET.get('select-year', '')
     car_type = request.GET.get('select-type', '')
+    min_price = request.GET.get('min_price', None)
+    max_price = request.GET.get('max_price', None)
+
 
     # Основной запрос
     cars = Car.objects.all()
@@ -31,6 +34,11 @@ def search_car(request):
         cars = cars.filter(year__icontains=year)
     if car_type:
         cars = cars.filter(car_type__icontains=car_type)
+    if min_price:
+        cars = cars.filter(price__gte=min_price)
+    if max_price:
+        cars = cars.filter(price__lte=max_price)
+
 
 
     # Проверка, есть ли результаты

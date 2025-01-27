@@ -1,504 +1,738 @@
 [
 {
-    "model": "admin.logentry",
-    "pk": 1,
-    "fields": {
-        "action_time": "2025-01-22T16:24:00.926Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "1",
-        "object_repr": "Вася",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-01-22T16:24:00.926Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Вася",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 2,
-    "fields": {
-        "action_time": "2025-01-22T16:26:45.038Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "1",
-        "object_repr": "Вася",
-        "action_flag": 3,
-        "change_message": ""
-    }
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-01-22T16:26:45.038Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "1",
+    "object_repr": "Вася",
+    "action_flag": 3,
+    "change_message": ""
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 3,
-    "fields": {
-        "action_time": "2025-01-22T16:26:57.070Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "2",
-        "object_repr": "Вася",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-01-22T16:26:57.070Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Вася",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 4,
-    "fields": {
-        "action_time": "2025-01-22T16:36:13.753Z",
-        "user": 1,
-        "content_type": 6,
-        "object_id": "2",
-        "object_repr": "Вася",
-        "action_flag": 2,
-        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0441\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u043a\\u0430\"]}}]"
-    }
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-01-22T16:36:13.753Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "Вася",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0441\\u043e\\u0442\\u0440\\u0443\\u0434\\u043d\\u0438\\u043a\\u0430\"]}}]"
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 5,
-    "fields": {
-        "action_time": "2025-01-22T16:36:50.107Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "1",
-        "object_repr": "Жига",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-01-22T16:36:50.107Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Жига",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 6,
-    "fields": {
-        "action_time": "2025-01-22T16:48:56.326Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "1",
-        "object_repr": "Жига",
-        "action_flag": 3,
-        "change_message": ""
-    }
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-01-22T16:48:56.326Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Жига",
+    "action_flag": 3,
+    "change_message": ""
+  }
 },
 {
-    "model": "admin.logentry",
-    "pk": 7,
-    "fields": {
-        "action_time": "2025-01-23T14:55:44.329Z",
-        "user": 1,
-        "content_type": 8,
-        "object_id": "2",
-        "object_repr": "Ламба",
-        "action_flag": 1,
-        "change_message": "[{\"added\": {}}]"
-    }
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-01-23T14:55:44.329Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Ламба",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 1,
-    "fields": {
-        "name": "Can add log entry",
-        "content_type": 1,
-        "codename": "add_logentry"
-    }
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-01-27T08:34:36.107Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Chevrolet Cobalt, 2021",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 2,
-    "fields": {
-        "name": "Can change log entry",
-        "content_type": 1,
-        "codename": "change_logentry"
-    }
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-01-27T12:52:31.550Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Mazda CX-5, 2017",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 3,
-    "fields": {
-        "name": "Can delete log entry",
-        "content_type": 1,
-        "codename": "delete_logentry"
-    }
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-01-27T12:57:03.907Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Audi Q8 55 TFSI, 2019",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 4,
-    "fields": {
-        "name": "Can view log entry",
-        "content_type": 1,
-        "codename": "view_logentry"
-    }
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-01-27T12:58:06.252Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "6",
+    "object_repr": "Mazda CX-5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 5,
-    "fields": {
-        "name": "Can add permission",
-        "content_type": 2,
-        "codename": "add_permission"
-    }
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-01-27T12:58:35.207Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "Mazda CX-5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 6,
-    "fields": {
-        "name": "Can change permission",
-        "content_type": 2,
-        "codename": "change_permission"
-    }
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-01-27T12:58:56.831Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "Mazda CX-5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 7,
-    "fields": {
-        "name": "Can delete permission",
-        "content_type": 2,
-        "codename": "delete_permission"
-    }
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-01-27T12:59:10.650Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "Mazda CX-5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 8,
-    "fields": {
-        "name": "Can view permission",
-        "content_type": 2,
-        "codename": "view_permission"
-    }
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-01-27T12:59:32.374Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "10",
+    "object_repr": "Mazda CX-5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 9,
-    "fields": {
-        "name": "Can add group",
-        "content_type": 3,
-        "codename": "add_group"
-    }
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 10,
-    "fields": {
-        "name": "Can change group",
-        "content_type": 3,
-        "codename": "change_group"
-    }
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 11,
-    "fields": {
-        "name": "Can delete group",
-        "content_type": 3,
-        "codename": "delete_group"
-    }
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 12,
-    "fields": {
-        "name": "Can view group",
-        "content_type": 3,
-        "codename": "view_group"
-    }
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 13,
-    "fields": {
-        "name": "Can add content type",
-        "content_type": 4,
-        "codename": "add_contenttype"
-    }
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 14,
-    "fields": {
-        "name": "Can change content type",
-        "content_type": 4,
-        "codename": "change_contenttype"
-    }
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 15,
-    "fields": {
-        "name": "Can delete content type",
-        "content_type": 4,
-        "codename": "delete_contenttype"
-    }
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 16,
-    "fields": {
-        "name": "Can view content type",
-        "content_type": 4,
-        "codename": "view_contenttype"
-    }
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 17,
-    "fields": {
-        "name": "Can add session",
-        "content_type": 5,
-        "codename": "add_session"
-    }
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 18,
-    "fields": {
-        "name": "Can change session",
-        "content_type": 5,
-        "codename": "change_session"
-    }
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 19,
-    "fields": {
-        "name": "Can delete session",
-        "content_type": 5,
-        "codename": "delete_session"
-    }
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 20,
-    "fields": {
-        "name": "Can view session",
-        "content_type": 5,
-        "codename": "view_session"
-    }
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 21,
-    "fields": {
-        "name": "Can add Сотрудник",
-        "content_type": 6,
-        "codename": "add_person"
-    }
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 22,
-    "fields": {
-        "name": "Can change Сотрудник",
-        "content_type": 6,
-        "codename": "change_person"
-    }
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 23,
-    "fields": {
-        "name": "Can delete Сотрудник",
-        "content_type": 6,
-        "codename": "delete_person"
-    }
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 24,
-    "fields": {
-        "name": "Can view Сотрудник",
-        "content_type": 6,
-        "codename": "view_person"
-    }
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 25,
-    "fields": {
-        "name": "Can add Пользователя",
-        "content_type": 7,
-        "codename": "add_user"
-    }
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 26,
-    "fields": {
-        "name": "Can change Пользователя",
-        "content_type": 7,
-        "codename": "change_user"
-    }
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 27,
-    "fields": {
-        "name": "Can delete Пользователя",
-        "content_type": 7,
-        "codename": "delete_user"
-    }
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 28,
-    "fields": {
-        "name": "Can view Пользователя",
-        "content_type": 7,
-        "codename": "view_user"
-    }
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 29,
-    "fields": {
-        "name": "Can add Машина",
-        "content_type": 8,
-        "codename": "add_car"
-    }
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Сотрудник",
+    "content_type": 6,
+    "codename": "add_person"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 30,
-    "fields": {
-        "name": "Can change Машина",
-        "content_type": 8,
-        "codename": "change_car"
-    }
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Сотрудник",
+    "content_type": 6,
+    "codename": "change_person"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 31,
-    "fields": {
-        "name": "Can delete Машина",
-        "content_type": 8,
-        "codename": "delete_car"
-    }
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Сотрудник",
+    "content_type": 6,
+    "codename": "delete_person"
+  }
 },
 {
-    "model": "auth.permission",
-    "pk": 32,
-    "fields": {
-        "name": "Can view Машина",
-        "content_type": 8,
-        "codename": "view_car"
-    }
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Сотрудник",
+    "content_type": 6,
+    "codename": "view_person"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 1,
-    "fields": {
-        "app_label": "admin",
-        "model": "logentry"
-    }
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Пользователя",
+    "content_type": 7,
+    "codename": "add_user"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 2,
-    "fields": {
-        "app_label": "auth",
-        "model": "permission"
-    }
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Пользователя",
+    "content_type": 7,
+    "codename": "change_user"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 3,
-    "fields": {
-        "app_label": "auth",
-        "model": "group"
-    }
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Пользователя",
+    "content_type": 7,
+    "codename": "delete_user"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 4,
-    "fields": {
-        "app_label": "contenttypes",
-        "model": "contenttype"
-    }
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Пользователя",
+    "content_type": 7,
+    "codename": "view_user"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 5,
-    "fields": {
-        "app_label": "sessions",
-        "model": "session"
-    }
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Машина",
+    "content_type": 8,
+    "codename": "add_car"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 6,
-    "fields": {
-        "app_label": "main",
-        "model": "person"
-    }
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Машина",
+    "content_type": 8,
+    "codename": "change_car"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 7,
-    "fields": {
-        "app_label": "users",
-        "model": "user"
-    }
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Машина",
+    "content_type": 8,
+    "codename": "delete_car"
+  }
 },
 {
-    "model": "contenttypes.contenttype",
-    "pk": 8,
-    "fields": {
-        "app_label": "cars",
-        "model": "car"
-    }
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Машина",
+    "content_type": 8,
+    "codename": "view_car"
+  }
 },
 {
-    "model": "sessions.session",
-    "pk": "7ypx4vvr3q5exnmdsd8l84w2hjw4sq05",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQRO_iGln2Jl4bSnrOYO36gwPIluKkQtydREoBzRTz3sxbeFqX4teeZj9FcRFanH47pvBMdQfxQfXeZGh1mSeWuyIP2uWtxfS6Hu7fQaFetnVCBmOZM-QtyCTQiMRqIJMJR5d4yKAcYdbBgHVgMQMMMKJxKp61-HwBBCU3xw:1taybU:cUaF8DcmRlsg-AF5mEeWPEd66w02Q2kaVq6VD5mmbKY",
-        "expire_date": "2025-02-06T14:54:44.496Z"
-    }
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
 },
 {
-    "model": "sessions.session",
-    "pk": "nqtiti91e8a91f4vwvhwde6yact99elc",
-    "fields": {
-        "session_data": ".eJxVjDsOwjAQRO_iGln2Jl4bSnrOYO36gwPIluKkQtydREoBzRTz3sxbeFqX4teeZj9FcRFanH47pvBMdQfxQfXeZGh1mSeWuyIP2uWtxfS6Hu7fQaFetnVCBmOZM-QtyCTQiMRqIJMJR5d4yKAcYdbBgHVgMQMMMKJxKp61-HwBBCU3xw:1taduK:3eMDeGc6g4-GWH9lU9T5zdR5S8iQlpvr7WAmJSsoTgY",
-        "expire_date": "2025-02-05T16:48:48.034Z"
-    }
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
 },
 {
-    "model": "main.person",
-    "pk": 2,
-    "fields": {
-        "name": "Вася",
-        "post": "Веб-разраб",
-        "image": "person/avatar-1_fXlo06F.jpg"
-    }
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
 },
 {
-    "model": "users.user",
-    "pk": 1,
-    "fields": {
-        "password": "pbkdf2_sha256$870000$gOO8QPCBWWMBKLck04gzx4$cJoZxu91m7dEzYkHILrTd5hrzKfjC7rbvk0csddzQIk=",
-        "last_login": "2025-01-23T14:54:44.472Z",
-        "is_superuser": true,
-        "username": "root",
-        "first_name": "",
-        "last_name": "",
-        "email": "",
-        "is_staff": true,
-        "is_active": true,
-        "date_joined": "2025-01-22T16:23:27.539Z",
-        "image": "",
-        "phone_number": null,
-        "groups": [],
-        "user_permissions": []
-    }
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
 },
 {
-    "model": "cars.car",
-    "pk": 2,
-    "fields": {
-        "name": "Ламба",
-        "mileage": 10000,
-        "year": 2020,
-        "transmission": "manual",
-        "location": "12",
-        "car_type": "truck",
-        "price": "800.00",
-        "image": "cars/car-1_kDnkknQ.jpg"
-    }
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "main",
+    "model": "person"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "cars",
+    "model": "car"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7ypx4vvr3q5exnmdsd8l84w2hjw4sq05",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln2Jl4bSnrOYO36gwPIluKkQtydREoBzRTz3sxbeFqX4teeZj9FcRFanH47pvBMdQfxQfXeZGh1mSeWuyIP2uWtxfS6Hu7fQaFetnVCBmOZM-QtyCTQiMRqIJMJR5d4yKAcYdbBgHVgMQMMMKJxKp61-HwBBCU3xw:1taybU:cUaF8DcmRlsg-AF5mEeWPEd66w02Q2kaVq6VD5mmbKY",
+    "expire_date": "2025-02-06T14:54:44.496Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nqtiti91e8a91f4vwvhwde6yact99elc",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGln2Jl4bSnrOYO36gwPIluKkQtydREoBzRTz3sxbeFqX4teeZj9FcRFanH47pvBMdQfxQfXeZGh1mSeWuyIP2uWtxfS6Hu7fQaFetnVCBmOZM-QtyCTQiMRqIJMJR5d4yKAcYdbBgHVgMQMMMKJxKp61-HwBBCU3xw:1taduK:3eMDeGc6g4-GWH9lU9T5zdR5S8iQlpvr7WAmJSsoTgY",
+    "expire_date": "2025-02-05T16:48:48.034Z"
+  }
+},
+{
+  "model": "main.person",
+  "pk": 2,
+  "fields": {
+    "name": "Вася",
+    "post": "Веб-разраб",
+    "image": "person/avatar-1_fXlo06F.jpg"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$gOO8QPCBWWMBKLck04gzx4$cJoZxu91m7dEzYkHILrTd5hrzKfjC7rbvk0csddzQIk=",
+    "last_login": "2025-01-23T14:54:44.472Z",
+    "is_superuser": true,
+    "username": "root",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-01-22T16:23:27.539Z",
+    "image": "",
+    "phone_number": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 2,
+  "fields": {
+    "name": "Ламба",
+    "brand": null,
+    "model": null,
+    "mileage": 10000,
+    "year": 2020,
+    "transmission": "manual",
+    "location": "12",
+    "car_type": "truck",
+    "price": "800.00",
+    "image": "cars/car-1_kDnkknQ.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 3,
+  "fields": {
+    "name": "Chevrolet Cobalt, 2021",
+    "brand": "Chevrolet",
+    "model": "II Рестайлинг",
+    "mileage": 26900,
+    "year": 2021,
+    "transmission": "manual",
+    "location": "110 Kathal St. Tampa City,",
+    "car_type": "sedan",
+    "price": "3000.00",
+    "image": "cars/1200x900n.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 4,
+  "fields": {
+    "name": "Mazda CX-5, 2017",
+    "brand": "Mazda",
+    "model": "Mazda CX-5, 2017",
+    "mileage": 170000,
+    "year": 2017,
+    "transmission": "manual",
+    "location": "115 Kathal St. Tampa City,",
+    "car_type": "sedan",
+    "price": "5000.00",
+    "image": "cars/1200x900n-_1_.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 5,
+  "fields": {
+    "name": "Audi Q8 55 TFSI, 2019",
+    "brand": "Audi",
+    "model": "Audi Q8 55 TFSI, 201",
+    "mileage": 50000,
+    "year": 2019,
+    "transmission": "manual",
+    "location": "111 Kathal St. Tampa City,",
+    "car_type": "sedan",
+    "price": "6000.00",
+    "image": "cars/1200x900n-_2_.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 6,
+  "fields": {
+    "name": "Mazda CX-5",
+    "brand": "Audi",
+    "model": "Mazda CX-5",
+    "mileage": 11,
+    "year": 111,
+    "transmission": "manual",
+    "location": "111",
+    "car_type": "sedan",
+    "price": "111111.00",
+    "image": "cars/1200x900n-_1__P3YyO15.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 7,
+  "fields": {
+    "name": "Mazda CX-5",
+    "brand": "Mazda",
+    "model": "Mazda CX-5",
+    "mileage": 10000,
+    "year": 2001,
+    "transmission": "manual",
+    "location": "dsdsad",
+    "car_type": "sedan",
+    "price": "12121121.00",
+    "image": "cars/1200x900n-_1__avafqoF.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 8,
+  "fields": {
+    "name": "Mazda CX-5",
+    "brand": "Mazda",
+    "model": "Mazda CX-5",
+    "mileage": 1221,
+    "year": 1212,
+    "transmission": "manual",
+    "location": "12121",
+    "car_type": "sedan",
+    "price": "1212.00",
+    "image": "cars/1200x900n-_1__f8fA5zQ.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 9,
+  "fields": {
+    "name": "Mazda CX-5",
+    "brand": "Mazda",
+    "model": "Mazda CX-5",
+    "mileage": 1212,
+    "year": 11414,
+    "transmission": "manual",
+    "location": "424214",
+    "car_type": "truck",
+    "price": "24421.00",
+    "image": "cars/1200x900n-_1__0ZTBM4n.jpg"
+  }
+},
+{
+  "model": "cars.car",
+  "pk": 10,
+  "fields": {
+    "name": "Mazda CX-5",
+    "brand": "Mazda",
+    "model": "Mazda CX-5",
+    "mileage": 1212,
+    "year": 12121,
+    "transmission": "manual",
+    "location": "sdadadaw",
+    "car_type": "suv",
+    "price": "11223.00",
+    "image": "cars/1200x900n-_1__uwMwhxP.jpg"
+  }
 }
 ]

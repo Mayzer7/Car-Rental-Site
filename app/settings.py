@@ -61,7 +61,8 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # Ваш контекстный процессор:
-                'cars.context_processors.latest_cars',
+                'cars.context_processors.all_cars',
+                'cars.context_processors.rare_cars',
                 'main.context_processors.func_persons',
             ],
         },
