@@ -18,7 +18,7 @@
                         СВОЕЙ МЕЧТЫ</h3>
                     <h5>Позвольте нам помочь вам с инновационным подходом<br>
                         к поиску автомобиля вашей мечты, избавив вас от стресса.</h5>
-                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                    <a href="{% url "cars:search_car" %}" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
@@ -28,7 +28,7 @@
                         МОДЕЛЯМИ</h3>
                     <h5>Откройте для себя наши лучшие автомобили, предоставляющие<br>
                         комфорт и стиль на каждом километре вашего пути.</h5>
-                    <a href="services.html" class="btn btn-lg btn-theme">Read more</a>
+                    <a href="services.html" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
             <div class="carousel-item banner-max-height item-bg">
@@ -38,7 +38,7 @@
                         БЕЗ ПРЕДЕЛОВ</h3>
                     <h5>Мы предлагаем широкий ассортимент автомобилей на любой вкус и бюджет,<br>
                         чтобы каждый мог найти идеальный вариант для себя.</h5>
-                    <a href="#" class="btn btn-lg btn-theme">Read more</a>
+                    <a href="#" class="btn btn-lg btn-theme">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -509,41 +509,16 @@
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-12">
                 <div class="intro-text">
-                    <h3>Do You Have Questions ?</h3>
+                    <h3>У Вас есть вопросы?</h3>
                 </div>
             </div>
             <div class="col-lg-3 col-md-4 col-sm-12">
-                <a href="contact.html" class="btn btn-md">Get in Touch</a>
+                <a href="{% url "main:contact" %}" class="btn btn-md">Свяжитесь с нами</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Intro section end -->
-
-<!-- Footer start -->
-<footer class="footer">
-    
-    <div class="sub-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <p class="copy">© 2020 <a href="#">Carzone Corp.</a> All Rights Reserved.</p>
-                </div>
-                <div class="col-lg-4">
-                    <div class="social-list-2">
-                        <ul>
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer end -->
 
 <!-- Full Page Search -->
 <div id="full-page-search">

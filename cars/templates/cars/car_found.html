@@ -112,57 +112,57 @@
                 <div class="sidebar-right">
                     <!-- Advanced search start -->
                     <div class="widget advanced-search2">
-                        <h3 class="sidebar-title">Search your desire car</h3>
-                        <form action="{% url "cars:search_car" %}" method="get">
+                        <h3 class="sidebar-title">Найдите автомобиль</h3>
+                        <form action="{% url 'cars:search_car' %}" method="get">
                             <div class="form-group">
-                                <input type="text" name="keyword" placeholder="Название машины" class="form-control">
+                                <input type="text" name="keyword" placeholder="Название машины" class="form-control" value="{{ filters.keyword }}">
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-brand">
-                                    <option selected="true" disabled="disabled">Бренд</option>
+                                    <option disabled {% if not filters.brand %}selected{% endif %}>Бренд</option>
                                     {% for brand in unique_brands %}
                                         {% if brand %}
-                                            <option>{{ brand }}</option>
+                                            <option value="{{ brand }}" {% if filters.brand == brand %}selected{% endif %}>{{ brand }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-make">
-                                    <option selected="true" disabled="disabled">Модель</option>
+                                    <option disabled {% if not filters.model %}selected{% endif %}>Модель</option>
                                     {% for model in unique_model %}
                                         {% if model %}
-                                            <option>{{ model }}</option>
+                                            <option value="{{ model }}" {% if filters.model == model %}selected{% endif %}>{{ model }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-location">
-                                    <option selected="true" disabled="disabled">Локация</option>
+                                    <option disabled {% if not filters.location %}selected{% endif %}>Локация</option>
                                     {% for location in unique_location %}
                                         {% if location %}
-                                            <option>{{ location }}</option>
+                                            <option value="{{ location }}" {% if filters.location == location %}selected{% endif %}>{{ location }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-year">
-                                    <option selected="true" disabled="disabled">Год выпуска</option>
+                                    <option disabled {% if not filters.year %}selected{% endif %}>Год выпуска</option>
                                     {% for year in unique_year %}
                                         {% if year %}
-                                            <option>{{ year }}</option>
+                                            <option value="{{ year }}" {% if filters.year == year %}selected{% endif %}>{{ year }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
                             </div>
                             <div class="form-group">
                                 <select class="form-control search-fields" name="select-type">
-                                    <option selected="true" disabled="disabled">Класс автомобиля</option>
+                                    <option disabled {% if not filters.car_type %}selected{% endif %}>Класс автомобиля</option>
                                     {% for car_type in unique_car_type %}
                                         {% if car_type %}
-                                            <option>{{ car_type }}</option>
+                                            <option value="{{ car_type }}" {% if filters.car_type == car_type %}selected{% endif %}>{{ car_type }}</option>
                                         {% endif %}
                                     {% endfor %}
                                 </select>
@@ -170,14 +170,13 @@
                             <div class="range-slider clearfix">
                                 <label>Цена</label>
                                 <div data-min="0" data-max="100000" data-min-name="min_price" data-max-name="max_price" data-unit="РУБ" class="range-slider-ui ui-slider"></div>
-                                <input type="hidden" id="min_price">
-                                <input type="hidden" id="max_price">
+                                <input type="hidden" id="min_price" name="min_price" value="{{ filters.min_price }}">
+                                <input type="hidden" id="max_price" name="max_price" value="{{ filters.max_price }}">
                             </div>
-                                <button class="btn btn-block button-theme btn-md">
-                                    <i class="fa fa-search"></i> Поиск
-                                </button>
-                            </div>
-                        </form>
+                            <button class="btn btn-block button-theme btn-md">
+                                <i class="fa fa-search"></i> Поиск
+                            </button>
+                        </form>                                            
                     </div>
                    
                     <!-- Question start -->
@@ -200,29 +199,7 @@
 </div>
 <!-- Featured car end -->
 
-<!-- Footer start -->
-<footer class="footer">
-    <div class="sub-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <p class="copy">© 2020 <a href="#">Carzone Corp.</a> All Rights Reserved.</p>
-                </div>
-                <div class="col-lg-4">
-                    <div class="social-list-2">
-                        <ul>
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer end -->
+
 
 <!-- Full Page Search -->
 <div id="full-page-search">
