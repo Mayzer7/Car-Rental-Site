@@ -1,4 +1,6 @@
 # Сайт по прокату автомобилей
+![image1](https://github.com/user-attachments/assets/a22c0066-9fff-4c6e-8e74-a41576e70b8c)
+![image2](https://github.com/user-attachments/assets/738adc45-c247-4455-9fce-f7a4f4abe1b1)
 # Deploy django project on server
 
 ## Создание пользователя
