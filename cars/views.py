@@ -65,4 +65,4 @@ def search_car(request):
             'year': year,
             'car_type': car_type,
         },
-    })
+    })  
